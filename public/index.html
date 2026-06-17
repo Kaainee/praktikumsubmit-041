@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PraktikumSubmit - Form Pengumpulan</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f6f9; padding: 20px; }
+        .container { background: #fff; padding: 30px; border-radius: 8px; max-width: 500px; margin: 0 auto; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h2 { text-align: center; color: #333; }
+        .form-group { margin-bottom: 15px; }
+        label { font-weight: bold; display: block; margin-bottom: 5px; }
+        input[type="text"], input[type="file"] { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { width: 100%; padding: 10px; background-color: #0078D4; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; }
+        button:hover { background-color: #005A9E; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Form Pengumpulan Tugas</h2>
+    <form action="/submit-task" method="POST" enctype="multipart/form-data">
+        
+        <div class="form-group">
+            <label for="nim">NIM:</label>
+            <input type="text" id="nim" name="nim" required>
+        </div>
+
+        <div class="form-group">
+            <label for="name">Nama Mahasiswa:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="class">Kelas:</label>
+            <input type="text" id="class" name="class">
+        </div>
+
+        <div class="form-group">
+            <label for="course">Mata Kuliah:</label>
+            <input type="text" id="course" name="course">
+        </div>
+
+        <div class="form-group">
+            <label for="file_tugas">Upload File Tugas:</label>
+            <input type="file" id="file_tugas" name="file_tugas" required>
+        </div>
+
+        <button type="submit">Kirim Tugas</button>
+    </form>
+</div>
+
+</body>
+</html>
